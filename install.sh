@@ -6,4 +6,4 @@ mamba create -n u_scgpt poetry wandb python=3.10 pytorch pytorch-cuda=12.1 scvi-
 micromamba activate u_scgpt
 pip install flash-attn==1.0.9 --no-build-isolation
 pip install scib
-pipinstall -g lijinbio/scGPT
+pip install git+https://github.com/lijinbio/scGPT
