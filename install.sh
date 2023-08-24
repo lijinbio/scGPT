@@ -4,7 +4,7 @@
 source trapdebug
 set -euo pipefail
 
-source "$MAMBA_ROOT_PREFIX/etc/profile.d/micromamba.sh"
+source ~/.micromambainit
 pkg=(
 poetry
 wandb
@@ -31,7 +31,7 @@ jupyter
 chex=0.1.7
 )
 mamba create -n u_scgpt -y -c pytorch-nightly -c nvidia "${pkg[@]}"
-mamba activate u_scgpt
+micromamba activate u_scgpt
 pip install flash-attn==1.0.9 --no-build-isolation
 pip install scib
 pip install git+https://github.com/lijinbio/scGPT
