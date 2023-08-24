@@ -2,6 +2,8 @@
 # vim: set noexpandtab tabstop=2:
 
 source trapdebug
+set -euo pipefail
+
 if [[ $MAMBA_ROOT_PREFIX ]]
 then
 	source "$MAMBA_ROOT_PREFIX/etc/profile.d/micromamba.sh"
