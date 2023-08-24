@@ -21,10 +21,7 @@ setup(
     python_requires=">=3.8",
     description="Large-scale generative pretrain of single cell using transformer.",
     install_requires=DEPENDENCIES,
-    packages=find_packages(
-        where='scgpt',
-        exclude=EXCLUDE_FROM_PACKAGES
-        ),
+    packages=['scgpt'],
     package_dir={},
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -33,7 +30,7 @@ setup(
     scripts=[],
     setup_requires=[],
     entry_points={},
-		url="https://github.com/bowang-lab/scGPT",
+    url="https://github.com/bowang-lab/scGPT",
     version='0.1.2.post1',
     zip_safe=False,
     license="MIT license",
