@@ -21,8 +21,11 @@ setup(
     python_requires=">=3.8",
     description="Large-scale generative pretrain of single cell using transformer.",
     install_requires=DEPENDENCIES,
-    packages=['scgpt'],
-    package_dir={},
+    packages=find_packages(
+        where='src',
+        exclude=EXCLUDE_FROM_PACKAGES
+        ),
+    package_dir={'': 'src'},
     long_description=readme,
     long_description_content_type="text/markdown",
     include_package_data=True,
